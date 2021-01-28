@@ -11,17 +11,22 @@ const randomNumber = Math.floor((Math.random() * 3) + 0);
 
 let answer;
 
+let lives = 3;
+
 const guess = () => {
     answer = document.getElementById('answer').value;
 
     if (answer === guessWords[randomNumber]) {
-        document.getElementById('output').innerHTML = `Your Guess is Correct`;
+        document.getElementById('output').innerText = `Your Guess is Correct`;
     } else {
-        document.getElementById('output').innerHTML = `Your guess is not correct Please try again`;
+        lives--;
+        document.getElementById('output').innerText = `Your guess is not correct Please try again`;
+        document.getElementById('lives').innerText = lives;
     }
 }
 
 const reset = () => {
     document.getElementById('output').innerText = '';
     document.getElementById('answer').value = '';
+    document.getElementById('lives').innerText = 3;
 }
