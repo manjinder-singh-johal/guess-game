@@ -5,12 +5,16 @@
 4. Otherwise output 'Not Correct - Try Again'
 */
 
+const guessWords = ['London', 'Amritsar', 'Banian'];
+
+const randomNumber = Math.floor((Math.random() * 3) + 0);
+
 let answer;
 
 const guess = () => {
     answer = document.getElementById('answer').value;
 
-    if (answer === 'Raja') {
+    if (answer === guessWords[randomNumber]) {
         document.getElementById('output').innerHTML = `Your Guess is Correct`;
     } else {
         document.getElementById('output').innerHTML = `Your guess is not correct Please try again`;
