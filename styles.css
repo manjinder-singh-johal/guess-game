@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: rgb(51, 207, 111);
+}
+
+.container {
+    flex-direction: column;
+    display: flex;
+    margin: 20px;
+}
+
+button, input {
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: black 5px 5px;
+}
