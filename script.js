@@ -20,8 +20,14 @@ const guess = () => {
         document.getElementById('output').innerText = `Your Guess is Correct`;
     } else {
         lives--;
-        document.getElementById('output').innerText = `Your guess is not correct Please try again`;
-        document.getElementById('lives').innerText = lives;
+
+        if (lives < 1) {
+            document.getElementById('output').innerText = 'Game Over!';
+            document.getElementById('lives').innerText = lives;
+        } else {
+            document.getElementById('output').innerText = `Please try again`;
+            document.getElementById('lives').innerText = lives;
+        }
     }
 }
 
