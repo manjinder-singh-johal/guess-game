@@ -16,6 +16,11 @@ let lives = 3;
 const guess = () => {
     answer = document.getElementById('answer').value;
 
+    if (answer === '') {
+        document.getElementById('output').innerText = 'Please enter a valid guess';
+        return;
+    }
+
     if (answer === guessWords[randomNumber]) {
         document.getElementById('output').innerText = `Your Guess is Correct`;
     } else {
@@ -24,6 +29,7 @@ const guess = () => {
         if (lives < 1) {
             document.getElementById('output').innerText = 'Game Over!';
             document.getElementById('lives').innerText = lives;
+            lives = 3;
         } else {
             document.getElementById('output').innerText = `Please try again`;
             document.getElementById('lives').innerText = lives;
